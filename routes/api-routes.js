@@ -1,13 +1,15 @@
 const express = require('express');
 const router = require("express").Router();
 const mongoose = require("mongoose");
-mongoose.connect('localhost:27017/test');
+// mongoose.connect('localhost:27017/test');
 const Schema = mongoose.Schema;
 
-const db = require("../models/workout");
+const db = require("../models/Workout");
+
+
 
 //post exercise
-router.post("/api/workout", ({ body }, res) => {
+router.post("/api/exercise", ({ body }, res) => {
     db.create(body)
         .then(dbWorkout => {
             res.json(dbWorkout);
@@ -17,8 +19,8 @@ router.post("/api/workout", ({ body }, res) => {
         });
 });
 
-// Request for getting all exercises
-router.get("/api/workout", (req, res) => {
+// Request for getting all exercise
+router.get("/api/exercises", (req, res) => {
     db.find()
         .then((dbData) => {
             res.json(dbData);
@@ -27,6 +29,16 @@ router.get("/api/workout", (req, res) => {
             res.json(err);
         });
 });
+
+// router.get("/exercise/:id", (req, res) => {
+//     db.find()
+//         .then((dbData) => {
+//             res.json(dbData);
+//         })
+//         .catch((err) => {
+//             res.json(err);
+//         });
+// });
 
 
 module.exports = router;
