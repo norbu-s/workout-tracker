@@ -36,7 +36,7 @@ module.exports = function(app) {
             });
     });
 
-    app.post("/api/workouts", (req, res) => {
+    app.post("/api/workout", (req, res) => {
         db.Workout.create(req.body)
             .then((dbWorkout) => {
                 res.json(dbWorkout);
