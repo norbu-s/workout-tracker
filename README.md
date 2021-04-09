@@ -6,12 +6,11 @@ This project is a responsive and user-friendly full stack application   that all
 Table of Content
 
 1.[ Author. ](#author)
-2.  [ Installation. ](#Installation)
-3. [ Usage tips. ](#Badges)
-4. [ License. ](#License)
-5. [ Contributors. ](#Contributions)
-6. [ License. ](#License)
-7.[Links. ](#Links)
+2.[ Installation. ](#Installation)
+3. [ License. ](#License)
+4.[ Contributors. ](#Contributions)
+5. [ License. ](#License)
+6. [Links. ](#Links)
 
 
 # Author
