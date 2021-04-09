@@ -2,6 +2,9 @@
 
 This project is a responsive and user-friendly full stack application   that allows users to track their workouts. It also provides user with the stas for their last 7 workouts on the dashboard page.
 
+
+Table of Content
+
 1.[ Author. ](#author)
 2.  [ Installation. ](#Installation)
 3. [ Usage tips. ](#Badges)
