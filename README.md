@@ -16,7 +16,7 @@ This project is a responsive and user-friendly full stack application   that all
 
 
 
-#Installation
+# Installation
 Terminal -
 npm install
 npm run seed
@@ -26,20 +26,20 @@ node.js
 
 
 
-Badges
+# Badges
 Website shields.io
 
-License
+# License
 None
 
-Contributions
+# Contributions
 None
 
-Application Links
+# Application Links
 
 - Heroku - https://powerful-bayou-64892.herokuapp.com/
 
 - Github - https://github.com/norbu-s/workout-tracker
 
-Questions
-Contact me for questions or comments below:
+# Questions
+Comments below:
