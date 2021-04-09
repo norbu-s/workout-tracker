@@ -18,20 +18,17 @@ module.exports = function(app) {
         );
     });
 
-    app.get(`/api/workouts/range`, (req, res) => {
+    app.get("/api/workouts/range", (req, res) => {
         Workout.aggregate([{
-                $addFields: {
-                    totalDuration: { $sum: "$exercises.duration" },
-                },
-            }, ])
-            .limit(7)
-            .then((dbWorkout) => {
-                res.json(dbWorkout);
-                console.log(dbWorkout);
-            })
-            .catch((err) => {
-                res.json(err);
-            });
+            $addFields: {
+                totalDuration: { $sum: "$exercises.duration" }
+            }
+        }]).then(result => {
+            const resultInRange = result.slice(-7);
+            res.json(resultInRange);
+        }).catch(err => {
+            res.json(err);
+        });
     });
 
     app.post("/api/workout", (req, res) => {
