@@ -11,7 +11,7 @@ Table of Content
 4. [ License. ](#License)
 5. [ Contributors. ](#Contributions)
 6. [ License. ](#License)
-7. [ Application Links. ](#Application Links)
+7.[Links. ](#Links)
 
 
 # Author
@@ -38,7 +38,7 @@ None
 # Contributions
 None
 
-# Application Links
+# Links
 
 - Heroku - https://powerful-bayou-64892.herokuapp.com/
 
