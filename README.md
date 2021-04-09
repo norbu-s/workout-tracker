@@ -2,13 +2,21 @@
 
 This project is a responsive and user-friendly full stack application   that allows users to track their workouts. It also provides user with the stas for their last 7 workouts on the dashboard page.
 
+1.[ Author. ](#author)
+2.  [ Installation. ](#Installation)
+3. [ Usage tips. ](#Badges)
+4. [ License. ](#License)
+5. [ Contributors. ](#Contributions)
+6. [ License. ](#License)
+7. [ Application Links. ](#Application Links)
+
 
 # Author
 - Norbu Sherpa
 
 
 
-Installation
+#Installation
 Terminal -
 npm install
 npm run seed
@@ -27,7 +35,7 @@ None
 Contributions
 None
 
-Application LInks
+Application Links
 
 - Heroku - https://powerful-bayou-64892.herokuapp.com/
 
