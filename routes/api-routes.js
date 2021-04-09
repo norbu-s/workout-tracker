@@ -1,10 +1,8 @@
-const { Workout } = require("../models");
-
-const db = require("../models/workout");
+const Workout = require("../models/workout");
 
 module.exports = function(app) {
     app.get("/api/workouts", (req, res) => {
-        db.Workout.aggregate(
+        Workout.aggregate(
             [{
                 $addFields: {
                     totalDuration: { $sum: "$exercises.duration" },
@@ -21,7 +19,7 @@ module.exports = function(app) {
     });
 
     app.get(`/api/workouts/range`, (req, res) => {
-        db.Workout.aggregate([{
+        Workout.aggregate([{
                 $addFields: {
                     totalDuration: { $sum: "$exercises.duration" },
                 },
@@ -37,7 +35,7 @@ module.exports = function(app) {
     });
 
     app.post("/api/workout", (req, res) => {
-        db.Workout.create(req.body)
+        Workout.create(req.body)
             .then((dbWorkout) => {
                 res.json(dbWorkout);
             })
@@ -47,11 +45,11 @@ module.exports = function(app) {
     });
 
     app.put("/api/workouts/:id", (req, res) => {
-        db.Workout.create(req.body)
-            .then((dbWorkout) => {
-                res.json(dbWorkout);
+        Workout.findOneAndUpdate({ _id: req.params.id }, { $push: { exercises: req.body } }, { new: true })
+            .then(updatedWorkout => {
+                res.json(updatedWorkout);
             })
-            .catch((err) => {
+            .catch(err => {
                 res.json(err);
             });
     });
